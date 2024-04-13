@@ -43,10 +43,10 @@ On unziping the given zip file, around 1400 binary files emerged. So, one of the
 FLAG: HRCTF{7h15_15_63771n6_r3p17171v3}
 ```
 - __Le chiffrage indéchiffrable__
-Three things were given programs output, llv, and a assembly file. We proceeded to convert the llvm and assembly file to their corresponding C files. Upon inspection a key was found. After brainstorming a little bit we searched the problem's name and found out that it is related to the indecipherable cipher, and the output is the encrypted text.
+Three things were given the programs output, llv, and a assembly file. We proceeded to convert the assembly file to its corresponding C files. Upon inspection a key was found. After brainstorming a little bit we searched the problem's name and found out that it is related to the indecipherable cipher, and the output is the encrypted text that is given. The key given in the assembly file was ```"LEARNINGISFUN"``` but the actual key was in the starting of .ll file ```hrcybersecctf```. We did brute force to find the flag that was taken as input from Flag.txt and then noticed that the initial key was a hint towards the actual flag value.
 
 ```sh
-FLAG: HRCTF{}
+FLAG: HRCTF{7h15_0n3_1_h0p3_w45_fun}
 ```
 
 ### Misc

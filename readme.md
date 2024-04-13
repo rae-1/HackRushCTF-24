@@ -2,8 +2,21 @@
 
 ### Reverse Engineering
 - __Tour de files__
+
+It was a really interesting problem. Firstly, we used the string command ```strings flracing > info.txt``` and looked for the flag in the txt file. Nothing was found inside it except "better luck next time". Then we used reverse engineering tools such as hopper in a hope that the flag would be present near one of the lines where malloc would be used. Unfortunately, there was no such statement in the main block. After not getting any fruitful results we just executed the file, a message appeared "file unchanged. Good luck next time kiddo!". Then we thought of changing the input file while executing the given file. So, in one terminal we run a for loop
 ```sh
-FLAG: HR24{}
+while true; do
+    echo "hrctf" >> dummy.txt
+done
+```
+and in the other terminal we run the given file.
+```sh
+./flracing dummy.txt
+```
+By, doing this it gave the flag.
+
+```sh
+FLAG: HR24{0383d4bd9ad8ddfc53c24aa6c4bdbc8a}
 ```
 
 ### Forensics

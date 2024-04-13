@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Apr 13 15:27:13 2024
+Invocation: foremost ./elites.dd 
+Output directory: /home/sahil/Documents/HackRush/CTF_24/Forensics/Sculpting_for_noobs/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: ./elites.dd
+Start: Sat Apr 13 15:27:13 2024
+Length: 22 KB (22528 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000015.png 	       2 KB 	       7680 	  (400 x 300)
+Finish: Sat Apr 13 15:27:13 2024
+
+1 FILES EXTRACTED
+	
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Apr 13 15:27:13 2024

@@ -31,8 +31,13 @@ Similar to the previous problem we used the linux _hexdump_ command to look for 
 ![part of hexdump](./Forensics/Sculpting_for_noobs/binwalk_op.png)
 Upon extracting it using ```binwalk -e elites.dd``` nothing interested was found. After trying for sometime we used _photrec_ to recover the images. But the image was partially restored showing the end part of it.
 ![carve_pal}](./Forensics/Sculpting_for_noobs/recup_dir.1/f0000015.png)
- We then observed that the hexdump of it contains two PNG keyword and two IEND keyword but the only problem was that the 2nd IEND was before the 2nd PNG. Therefore, the problem became a piece of puzzle where we need to rearrange it.
+ We then observed that the hexdump of it contains two PNG keyword and two IEND keyword but the only problem was that the 2nd IEND was before the 2nd PNG. Therefore, the problem became a piece of puzzle where we need to rearrange it. We wrote a python script that would do that but there was one problem the starting and ending signature of the png files were jumbled up. We also, tried to retrive the data backwards but it didn't work. Lastly we found one reseach paper and from there we traced the links to find the github repo containing the code. After executing it we found the another part of the flag.
+ ![do_you_even](./Forensics/Sculpting_for_noobs/other_part.jpeg)
 
+repo [link](https://github.com/fkie-cad/png-carving)
+```sh
+ FLAG: HRCTF{do_you_even_carve_pal}
+```
 ### OSINT
 - __GeoGuessr Flags__
 A image was given and the flag was about coordinates. So, we searched it in google lens and found out that it is the Red Square in Moscow, Russia. We pin pointed the exact [location](https://www.google.com/maps/@55.7542066,37.6194264,3a,75y,108.86h,95.79t/data=!3m6!1e1!3m4!1sD6O09ioTLaeO0v2k5GeFlw!2e0!7i13312!8i6656?entry=ttu), the coordinates were 55.754,37.619 but it didn't worked. Then we started looking for the nearby landmarks in the area in google.
